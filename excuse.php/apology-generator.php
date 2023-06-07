@@ -55,6 +55,7 @@
         $reason = $_GET['reason'];
         $excuseMessage = "";
         $date = date("d/m/Y");
+        $dayOfWeek = strftime("%A");
 
         $apologies = array(
             "illness" => array(
@@ -93,27 +94,27 @@
 
             switch ($reason) {
                 case 'illness':
-                    $excuseMessage = "Dear $teacher,<br>I am writing to inform you that my $gender, $name, is unable to attend school today ($date) due to illness.
+                    $excuseMessage = "Dear $teacher,<br>I am writing to inform you that my $gender, $name, is unable to attend school today ($dayOfWeek $date) due to illness.
                     They are not feeling well and need rest and medical attention. $selectedApology
                     <br>Thank you for your understanding.<br>Sincerely,<br>$name's Parent.";
                     break;
 
                 case 'death':
-                    $excuseMessage = "Dear $teacher,<br>I regret to inform you that my $gender, $name, will not be able to attend school today ($date).
+                    $excuseMessage = "Dear $teacher,<br>I regret to inform you that my $gender, $name, will not be able to attend school today ($dayOfWeek $date).
                     We have experienced a loss in our family as our beloved pet has passed away. This has deeply affected my child and they need time to grieve and come to terms with the loss.
                     $selectedApology We appreciate your understanding during this difficult time.<br>Sincerely,<br>$name's Parent.";
                     
                     break;
 
                 case 'sea':
-                    $excuseMessage = "Dear $teacher,<br>I am writing to inform you that my $gender, $name, will not be present in school today ($date).
+                    $excuseMessage = "Dear $teacher,<br>I am writing to inform you that my $gender, $name, will not be present in school today ($dayOfWeek $date).
                     They have been selected to participate in a significant extra-curricular activity that will greatly contribute to their personal and academic development.
                     $selectedApology<br>Thank you for your understanding,<br>$name's Parent.";
 
                     break;
 
                 case 'fortune-teller':
-                    $excuseMessage = "Dear $teacher,<br>I hope this message finds you well. I am writing to inform you that my $gender, $name, will not be able to attend school today ($date).
+                    $excuseMessage = "Dear $teacher,<br>I hope this message finds you well. I am writing to inform you that my $gender, $name, will not be able to attend school today ($dayOfWeek $date).
                     We recently visited a fortune teller who predicted that if my child were to step out of the house, they would be at risk of suffering a brain hemorrhage. As a cautious parent, I must prioritize their well-being and follow this guidance.
                     $selectedApology I understand the importance of regular attendance, and I assure you that this absence is due to exceptional circumstances. We will make every effort to catch up on missed lessons and assignments. Thank you for your understanding and support.<br>Sincerely,<br>$name's Parent.";
 
