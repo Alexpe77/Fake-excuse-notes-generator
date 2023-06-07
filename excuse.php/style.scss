@@ -1,0 +1,63 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+
+    input[type="radio"] {
+        cursor: pointer;
+    }
+}
+
+.title_container {
+    height: 100px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    background-color: #F8F4E3;
+}
+
+.top_form {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: space-around;
+}
+
+fieldset {
+    background-color: #F8F4F9;
+    width: auto;
+
+    .btn_container {
+        text-align: center;
+    }
+
+    .submit_btn {
+        padding: 5px;
+        width: 100px;
+        margin: 10px 0 10px 0;
+        cursor: pointer;
+    }
+}
+
+.reason_absence {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+
+    legend {
+        font-size: 28px;
+        margin-top: 20px;
+    }
+
+    label {
+        margin-left: 10px;
+    }
+}
